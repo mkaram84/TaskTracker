@@ -1,0 +1,14 @@
+d:\Repos\TaskTracker\TaskTracker.App\bin\Debug\net8.0\TaskTracker.App.exe
+d:\Repos\TaskTracker\TaskTracker.App\bin\Debug\net8.0\TaskTracker.App.deps.json
+d:\Repos\TaskTracker\TaskTracker.App\bin\Debug\net8.0\TaskTracker.App.runtimeconfig.json
+d:\Repos\TaskTracker\TaskTracker.App\bin\Debug\net8.0\TaskTracker.App.dll
+d:\Repos\TaskTracker\TaskTracker.App\bin\Debug\net8.0\TaskTracker.App.pdb
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.GeneratedMSBuildEditorConfig.editorconfig
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.AssemblyInfoInputs.cache
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.AssemblyInfo.cs
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.csproj.CoreCompileInputs.cache
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.dll
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\refint\TaskTracker.App.dll
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.pdb
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\TaskTracker.App.genruntimeconfig.cache
+d:\Repos\TaskTracker\TaskTracker.App\obj\Debug\net8.0\ref\TaskTracker.App.dll
