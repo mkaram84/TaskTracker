@@ -1,10 +1,11 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using Task = TaskTracker.App.Business.Domain.Task;
+using TaskStatus = TaskTracker.App.Business.Enum.TaskStatus;
 
-namespace TaskTracker.App.Business;
+namespace TaskTracker.App.Business.Core;
 
 public class TaskTracker(TaskStore taskStore)
 {
-    public bool AddTask(string description)
+    public (bool, Task) AddTask(string description)
     {
         var task = new Task()
         {
@@ -14,13 +15,13 @@ public class TaskTracker(TaskStore taskStore)
             UpdatedAt = DateTime.Now
         };
 
-        return taskStore.AddTask(task);
+        return (taskStore.AddTask(task), task);
     }
 
     public bool UpdateTaskDescription(int id, string description)
     {
         var task = taskStore.GetTaskById(id);
-        if(task == null) return false;
+        if (task == null) return false;
 
         task.Description = description;
         task.UpdatedAt = DateTime.Now;
@@ -35,7 +36,7 @@ public class TaskTracker(TaskStore taskStore)
     public bool UpdateTaskStatus(int id, TaskStatus taskStatus)
     {
         var task = taskStore.GetTaskById(id);
-        if(task == null) return false;
+        if (task == null) return false;
 
         task.Status = taskStatus;
         task.UpdatedAt = DateTime.Now;

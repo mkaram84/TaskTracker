@@ -1,4 +1,6 @@
-﻿namespace TaskTracker.App.Business;
+﻿using TaskTracker.App.Business.Enum;
+
+namespace TaskTracker.App.Business.Domain;
 public class Task
 {
     public int? Id { get; set; }

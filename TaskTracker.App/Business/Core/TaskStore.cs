@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
+using Task = TaskTracker.App.Business.Domain.Task;
 
-namespace TaskTracker.App.Business;
+namespace TaskTracker.App.Business.Core;
 public class TaskStore
 {
     public required string FilePath { get; set; }
@@ -8,8 +9,7 @@ public class TaskStore
     public bool AddTask(Task task)
     {
         var tasks = GetAllTasks();
-        var nextId = tasks.LastOrDefault()?.Id + 1;
-        task.Id = nextId;
+        task.Id = tasks.LastOrDefault()?.Id ?? 0 + 1;
         tasks.Add(task);
         File.WriteAllText(FilePath, JsonSerializer.Serialize(tasks));
 
@@ -45,8 +45,16 @@ public class TaskStore
             File.CreateText(FilePath);
             return [];
         }
-        var json = File.ReadAllText(FilePath);
-        return JsonSerializer.Deserialize<List<Task>>(json) ?? [];
+        try
+        {
+            var json = File.ReadAllText(FilePath);
+            //using JsonDocument doc = JsonDocument.Parse(json);
+            return JsonSerializer.Deserialize<List<Task>>(json);
+        }
+        catch (JsonException)
+        {
+            return [];
+        }
     }
 
     public Task? GetTaskById(int id)

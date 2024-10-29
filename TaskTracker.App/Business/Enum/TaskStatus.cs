@@ -1,4 +1,4 @@
-﻿namespace TaskTracker.App.Business;
+﻿namespace TaskTracker.App.Business.Enum;
 
 public enum TaskStatus
 {
