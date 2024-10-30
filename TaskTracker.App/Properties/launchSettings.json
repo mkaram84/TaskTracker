@@ -2,7 +2,7 @@
   "profiles": {
     "TaskTracker.App": {
       "commandName": "Project",
-      "commandLineArgs": "delete 1"
+      "commandLineArgs": "add \"Test3\""
     }
   }
 }

@@ -9,7 +9,7 @@ public class TaskStore
     public bool AddTask(Task task)
     {
         var tasks = GetAllTasks();
-        task.Id = tasks.LastOrDefault()?.Id ?? 0 + 1;
+        task.Id = (tasks.LastOrDefault()?.Id ?? 0)+ 1;
         tasks.Add(task);
         File.WriteAllText(FilePath, JsonSerializer.Serialize(tasks));
 

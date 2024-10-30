@@ -5,7 +5,7 @@ namespace TaskTracker.App.Business.Core;
 
 public class TaskTracker(TaskStore taskStore)
 {
-    public (bool, Task) AddTask(string description)
+    public bool AddTask(string description)
     {
         var task = new Task()
         {
@@ -15,7 +15,7 @@ public class TaskTracker(TaskStore taskStore)
             UpdatedAt = DateTime.Now
         };
 
-        return (taskStore.AddTask(task), task);
+        return taskStore.AddTask(task);
     }
 
     public bool UpdateTaskDescription(int id, string description)
